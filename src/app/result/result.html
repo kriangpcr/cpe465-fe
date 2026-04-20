@@ -72,12 +72,18 @@
     <!-- Weakness -->
     <div class="card">
       <h2>ทำไมถึงได้ {{ data.score }}%?</h2>
+      <div class="severity-legend">
+        <span class="legend-dot-item"><span class="legend-dot high-dot"></span> High</span>
+        <span class="legend-dot-item"><span class="legend-dot medium-dot"></span> Medium</span>
+        <span class="legend-dot-item"><span class="legend-dot low-dot"></span> Low</span>
+      </div>
 
       <div *ngFor="let item of data.reasonForScore; let i = index" class="reason-item">
 
         <div class="circle" [ngClass]="{
            'high': item.severity === 'High',
-           'medium': item.severity !== 'High'
+           'medium': item.severity === 'Medium',
+           'low': item.severity === 'Low'
          }">
           {{ i + 1 }}
         </div>
