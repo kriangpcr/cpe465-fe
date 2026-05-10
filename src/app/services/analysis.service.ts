@@ -17,9 +17,9 @@ type businessData = {
 export class AnalysisService {
   private rawData: any = null;
 
-  private API_URL = 'https://cpe465-be.onrender.com/business/analysis-idea';
+  private API_URL = 'https://cpe465-be-1.onrender.com/business/analysis-idea';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   analyzeBusinessPlan(formData: any): Observable<any> {
     const rawPayload = {
@@ -41,7 +41,7 @@ export class AnalysisService {
 
   getSharedData() {
     console.log(this.rawData);
-    
+
     return this.rawData;
   }
 
