@@ -16,7 +16,7 @@ export class Business implements OnInit {
   constructor(private analysisService: AnalysisService) {}
 
   score: number = 0;
-
+//test
   bmc: any;
   ngOnInit() {
     const sharedData = this.analysisService.getSharedData();
